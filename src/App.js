@@ -5,16 +5,16 @@ import Result from './Result';
 
 const options = [
   { name: 'Called you “bestie,” “best friend,” or “homie?” ' },
-  { name: "Invited another person to dinner when it’s supposed to just be the two of you" },
-  { name: "Asked you for advice about their ex or told you about a recent date they went on" },
-  { name: "Tried setting you up with someone else or told you that you’d be perfect with one of their friends" },
-  { name: "Told you that they aren't looking for anything serious right now" },
-  { name: 'Canceled plans on you an hour before because they\'re "too tired"' },
-  { name: "Said “you’re like a brother/sister to me?" },
-  { name: "Never complimented you back after you told them how great they look" },
-  { name: "Told you how “hot” your friend is" },
-  { name: "Told you that if you're both not married by 40, then you'll get married to each other " },
-  { name: "Invited another person to dinner when it’s supposed to just be the two of you " },
+  { name: "Invited another person to dinner when it’s supposed to just be the two of you?" },
+  { name: "Asked you for advice about their ex or told you about a recent date they went on?" },
+  { name: "Tried setting you up with someone else or told you that you’d be perfect with one of their friends?" },
+  { name: "Told you that they aren't looking for anything serious right now?" },
+  { name: 'Canceled plans on you an hour before because they\'re "too tired"?' },
+  { name: "Said “you’re like a brother/sister to me”? " },
+  { name: "Never complimented you back after you told them how great they look?" },
+  { name: "Told you how “hot” your friend is?" },
+  { name: "Told you that if you're both not married by 40, then you'll get married to each other?" },
+
 
 
 ]
