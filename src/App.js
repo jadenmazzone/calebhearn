@@ -85,12 +85,13 @@ function App() {
             ))
           }
         </ol>
+        {
+          showResult ? <Result result={result} /> : <></>
+        }
         <button className='bg-darkBlue text-white rounded p-2 mt-8'>calculate friend zone score</button>
         <button onClick={handleRestart} type='button' className='bg-darkBlue text-white rounded p-2 ml-4'>restart quiz</button>
       </form>
-      {
-        showResult ? <Result result={result} /> : <></>
-      }
+
     </div>
   );
 }
