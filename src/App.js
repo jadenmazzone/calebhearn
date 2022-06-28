@@ -27,6 +27,12 @@ function App() {
     return { ...option, index: idx, checked: false }
   }))
 
+
+  useEffect(() => {
+    document.title = "The Friend Zone Test"
+  }, []);
+
+
   useEffect(() => {
     let total = 0
     checkboxes.forEach((checkbox, i) => checkbox.checked ? total += 1 : null);
