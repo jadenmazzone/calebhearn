@@ -1,7 +1,7 @@
 import React, { useState, Fragment } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 
-function Result({ result, isOpen, closeModal }) {
+function Result({ description, title, isOpen, closeModal }) {
     return (
         <Transition appear show={isOpen} as={Fragment}>
             <Dialog as="div" className="relative z-10" onClose={closeModal}>
@@ -33,18 +33,20 @@ function Result({ result, isOpen, closeModal }) {
                                     as="h3"
                                     className="text-lg font-medium leading-6 text-darkBlue"
                                 >
-                                    Results
+                                    {title}
+
+
                                 </Dialog.Title>
                                 <div className="mt-2">
-                                    <p className="text-sm text-gray-500">
-                                        {result}
+                                    <p className=" text-gray-500">
+                                        {description}
                                     </p>
                                 </div>
 
                                 <div className="mt-4">
                                     <button
                                         type="button"
-                                        className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                                        className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 py-2 text-xs font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                                         onClick={closeModal}
                                     >
                                         Take me back!
