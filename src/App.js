@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Result from './Result';
 
 const options = [
-  { name: 'Called you “bestie,” “best friend,” or “homie?” ' },
+  { name: 'Called you “bestie,” “best friend,” or “homie”? ' },
   { name: "Invited another person to dinner when it’s supposed to just be the two of you?" },
   { name: "Asked you for advice about their ex or told you about a recent date they went on?" },
   { name: "Tried setting you up with someone else or told you that you’d be perfect with one of their friends?" },
@@ -26,6 +26,14 @@ function App() {
   const [checkboxes, setCheckboxes] = useState(options.map((option, idx) => {
     return { ...option, index: idx, checked: false }
   }))
+
+  function closeModal() {
+    setShowResult(false)
+  }
+
+  function openModal() {
+    setShowResult(true)
+  }
 
 
   useEffect(() => {
@@ -91,10 +99,10 @@ function App() {
             ))
           }
         </ol>
-        {
-          showResult ? <Result result={result} /> : <></>
-        }
+
         <button className='bg-darkBlue text-white rounded p-2 mt-8'>calculate friend zone score</button>
+        <Result result={result} isOpen={showResult} closeModal={closeModal} />
+
         <button onClick={handleRestart} type='button' className='bg-darkBlue text-white rounded p-2 ml-4'>restart quiz</button>
       </form>
 
