@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { useEffect, useState } from 'react';
 import Result from './Result';
+import { Helmet } from 'react-helmet';
 
 const options = [
   { name: 'Called you “bestie,” “best friend,” or “homie”? ' },
@@ -96,6 +97,10 @@ function App() {
 
   return (
     <div className='bg-lightBlue h-screen w-full p-4'>
+      <Helmet>
+        <title>The Friend Zone Test</title>
+        <meta name='description' content="Take this test to find out whether you are in the Friend Zone, inspired by Caleb Hearn's latest single 'Friend Right Now' " />
+      </Helmet>
       <iframe className="rounded" src="https://open.spotify.com/embed/track/1525qKTOc3G2KJNYRG3rSQ?utm_source=generator" width="100%" height="80" frameBorder="0" allowFullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
       <h1 className='text-darkBlue text-3xl my-4 '>Take this quiz to see if you're in the friend zone</h1>
       <p className='text-darkBlue font-bold'>Answer all of the questions below to figure out whether you are in the friend zone</p>
