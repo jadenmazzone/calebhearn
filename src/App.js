@@ -96,7 +96,7 @@ function App() {
 
 
   return (
-    <div className='bg-lightBlue h-screen w-full p-4'>
+    <main className='bg-lightBlue h-screen w-full p-4 flex-col flex'>
       <Helmet>
         <title>The Official Friend Zone Test</title>
         <meta name='description' content="Take this test to find out whether you are in the Friend Zone!" />
@@ -121,8 +121,9 @@ function App() {
 
         <button onClick={handleRestart} type='button' className='bg-darkBlue text-white rounded p-2 ml-4'>restart quiz</button>
       </form>
+      <p className='mt-auto ml-auto text-blue text-xs'>Caleb Hearn, Friend Right Now</p>
 
-    </div>
+    </main>
   );
 }
 
